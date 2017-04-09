@@ -89,7 +89,6 @@ object XagParser extends Parser[(String, String, Float, Long)] {
     * @return
     */
   protected def transform(source: Source) = {
-    // toStream method throw gc overhead, so keep iterator
     val (i1, i2) = parserCsv(source).duplicate
     val max = i1.map(_._4).max
     var cpt = 0

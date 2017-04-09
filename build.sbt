@@ -7,7 +7,7 @@ lazy val root = (project in file("."))
 fork in run := true
 
 javacOptions ++= Seq(
-  "-Xmx:2G"
+  "-Xmx:1G"
 )
 
 libraryDependencies ++= Seq(
