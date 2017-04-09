@@ -1,9 +1,6 @@
 EB
 =====================
 
-The main purpose of this project is to know on which places there are some free "vélibs".
-Data are get from the [JcDecaux Developer API](https://developer.jcdecaux.com/#/home)
-
 Technologies
 ============
 
