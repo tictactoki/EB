@@ -117,7 +117,7 @@ object Main {
       case Left(x) => throw new Exception("File on arg doesn't exist or path is not valid")
       case Right(_) => {
         val seconds = (System.currentTimeMillis() - started) / 1000
-        println(s"Parser finished successfully, it take $seconds seconds")
+        println(s"Parser finished successfully, it took $seconds seconds")
       }
     }
   }
