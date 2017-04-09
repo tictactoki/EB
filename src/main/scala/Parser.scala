@@ -50,7 +50,7 @@ object XagParser extends Parser[(String, String, Float, Long)] {
     * @return
     */
   protected def getBufferedWriter(name: String) = {
-    new BufferedWriter(new FileWriter("./files/" + name))
+    new BufferedWriter(new FileWriter("./" + name))
   }
 
   /**
@@ -110,12 +110,16 @@ object Main {
   import XagParser._
 
   def main(args: Array[String]) {
+    val started = System.currentTimeMillis()
     Try {
       val file = new File(args(0))
       openAndWrite(Source.fromFile(file))
     }.toEither match {
       case Left(x) => throw new Exception("File on arg doesn't exist or path is not valid")
-      case Right(_) => println("Parser finished successfully")
+      case Right(_) => {
+        val seconds = (System.currentTimeMillis() - started) / 1000
+        println(s"Parser finished successfully, it take $seconds seconds")
+      }
     }
   }
 

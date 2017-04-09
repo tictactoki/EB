@@ -17,4 +17,4 @@ Run sbt on the root directory:
 
 > run pathToXagFile/xag.csv
 
-csv files will be created on files directory
+csv files will be created on root directory
